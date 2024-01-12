@@ -1,5 +1,6 @@
 #!/bin/bash
 
+gitleaks_version=v8.18.1
 
 # Check if the current directory is a Git repository
 if [ ! -d .git ]; then
@@ -16,8 +17,13 @@ install_gitleaks() {
 	fi
 
     # Clone gitleaks repository to /tmp
-    git clone https://github.com/zricethezav/gitleaks.git /tmp/gitleaks
 
+    if [ "$1" = "gitleaks_latest" ]; then
+	 git clone --depth 1  https://github.com/gitleaks/gitleaks.git /tmp/gitleaks
+    else
+         git clone --depth 1 --branch $gitleaks_version https://github.com/gitleaks/gitleaks.git /tmp/gitleaks
+    fi
+    
     # Navigate to the gitleaks directory
     cd /tmp/gitleaks
 
