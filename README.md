@@ -16,7 +16,9 @@ Supported OS: macOS, Linux.
 curl https://raw.githubusercontent.com/sergeypashkov/gitleaks-pre-commit/main/gitleaks-install-pre-commit.sh | sh
 ```
 
-The default installed version of gitleaks is v8.18.1.
+Notes:
+1. The script automatically installs gitleaks if it is not found on the system.
+2. The default version of gitleaks is v8.18.1.
 
 If you need the latest version, execute:
 
