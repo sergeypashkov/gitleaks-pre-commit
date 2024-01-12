@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 gitleaks_version=v8.18.1
 
 # Check if the current directory is a Git repository
