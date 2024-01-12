@@ -19,7 +19,7 @@ install_gitleaks() {
     # Clone gitleaks repository to /tmp
 
     if [ "$1" = "gitleaks_latest" ]; then
-	 git clone --depth 1  https://github.com/gitleaks/gitleaks.git /tmp/gitleaks
+	 git clone --depth 1 https://github.com/gitleaks/gitleaks.git /tmp/gitleaks
     else
          git clone --depth 1 --branch $gitleaks_version https://github.com/gitleaks/gitleaks.git /tmp/gitleaks
     fi
