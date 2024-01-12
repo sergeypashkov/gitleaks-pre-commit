@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 gitleaks_version=v8.18.1
 
@@ -31,7 +31,7 @@ install_gitleaks() {
     make build
 
     # Check if the operating system is macOS
-    if [[ "$OSTYPE" == "darwin"* ]]; then
+    if [ "$(uname)" = "Darwin" ]; then
         # Check if /opt/local/bin is already in the PATH
         if [[ ":$PATH:" != *":/opt/local/bin:"* ]]; then
             # If not, add /opt/local/bin to the PATH for the current user
@@ -50,7 +50,7 @@ install_gitleaks() {
         echo "gitleaks is now built and installed. The binary is added to /opt/local/bin."
 
     # Check if the operating system is Linux
-    elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+    elif [ "$(uname)" = "Linux" ]; then
         # Copy gitleaks binary to /usr/local/bin
         sudo cp gitleaks /usr/local/bin/
         echo "gitleaks is now built and installed. The binary is added to /usr/local/bin."
