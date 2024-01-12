@@ -26,6 +26,12 @@ If you need the latest version, execute:
 curl https://raw.githubusercontent.com/sergeypashkov/gitleaks-pre-commit/main/gitleaks-install-pre-commit.sh | sh -s -- gitleaks_latest
 ```
 
+### Configuration ###
+You can temporarily disable gitleaks hook using git config:
+```
+git config --type=bool hooks.enable-gitleaks false
+```
+
 ### Uninstallation ###
 
 1. Go to the repository folder
