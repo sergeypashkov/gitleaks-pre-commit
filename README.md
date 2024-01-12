@@ -1,5 +1,7 @@
 # gitleaks-pre-commit
-Repository with scripts to install gitleaks and add pre-commit hook using it
+Repository with scripts to install gitleaks and add pre-commit hook using it.
+
+Requirements: git, go, curl
 
 ## Usage on macOS and Linux ##
 
