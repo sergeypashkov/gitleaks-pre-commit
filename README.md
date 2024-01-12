@@ -33,12 +33,13 @@ curl https://raw.githubusercontent.com/sergeypashkov/gitleaks-pre-commit/main/gi
 curl https://raw.githubusercontent.com/sergeypashkov/gitleaks-pre-commit/main/gitleaks-uninstall-pre-commit.sh | sh
 ```
 
-Notes:
-1. gitleaks **will not be removed** by default.
-2. It only removes gitleaks from location used by the installation script 
+Notes, gitleaks **will not be removed** by default.
 
 If you want to remove the gitleaks binary, execute:
 
 ```
 curl https://raw.githubusercontent.com/sergeypashkov/gitleaks-pre-commit/main/gitleaks-uninstall-pre-commit.sh | sh -s -- gitleaks_uninstall
 ```
+
+It only removes gitleaks from locations used by the installation script.
+
