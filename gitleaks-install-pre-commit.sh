@@ -53,6 +53,7 @@ install_gitleaks() {
     elif [ "$(uname)" = "Linux" ]; then
         # Copy gitleaks binary to /usr/local/bin
         sudo cp gitleaks /usr/local/bin/
+	sudo chmod +x /usr/local/bin/gitleaks
         echo "gitleaks is now built and installed. The binary is added to /usr/local/bin."
 
     else
