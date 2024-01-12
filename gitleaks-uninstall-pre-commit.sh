@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 set -e
 
@@ -11,10 +11,10 @@ fi
 uninstall_gitleaks() {
 
     # Check if the operating system is macOS
-    if [[ "$OSTYPE" == "darwin"* ]]; then
+    if [ "$(uname)" = "Darwin" ]; then
     	gitleaks_path="/opt/local/bin/gitleaks"
     # Check if the operating system is Linux
-    elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+    elif [ "$(uname)" = "Linux" ]; then
        gitleaks_path="/usr/local/bin/gitleaks"
     else
         echo "Error: Unsupported operating system."
@@ -39,7 +39,7 @@ remove_pre_commit_hook() {
 	fi   
 }
 
-if [ "$1" = "uninstall_gitleaks" ]; then
+if [ "$1" = "gitleaks_uninstall" ]; then
 	uninstall_gitleaks
 fi
 
