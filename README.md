@@ -18,7 +18,7 @@ curl https://raw.githubusercontent.com/sergeypashkov/gitleaks-pre-commit/main/gi
 
 Notes:
 1. The script automatically installs gitleaks if it is not found on the system.
-2. The default version of gitleaks is v8.18.1.
+2. The default version of gitleaks is **v8.18.1**.
 
 If you need the latest version, execute:
 
@@ -41,7 +41,7 @@ git config --type=bool hooks.enable-gitleaks false
 curl https://raw.githubusercontent.com/sergeypashkov/gitleaks-pre-commit/main/gitleaks-uninstall-pre-commit.sh | sh
 ```
 
-Notes, gitleaks **will not be removed** by default.
+Note, gitleaks **will not be removed** by default.
 
 If you want to remove the gitleaks binary, execute:
 
